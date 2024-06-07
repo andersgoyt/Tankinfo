@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infomation About Tanks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+    </style>
+
+<style>
+    .additional-info {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        background-color: #333; /* Change the color as desired */
+        color: white; /* Text color */
+	font-size: 12px
+    }
+
+    .additional-info h2 {
+        color: white; /* Header text color */
+	font-size: 16px
+    }
+</style>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(contactForm);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'contact.php', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const response = xhr.responseText;
+                    alert(response); // Show a response message to the user
+                    contactForm.reset(); // Clear the form after submission
+                }
+            };
+            xhr.send(formData);
+        });
+    });
+</script>
+
+
+</head>
+<body>
+    <header>
+        <h1>Infomation About Tanks</h1>
+    </header>
+    <nav>
+        <input type="text" id="searchBar" placeholder="Search for a tank...">
+        <ul id="tankList">
+            <li><a href="m41_bulldog.html">M41 Walker Bulldog</a></li>
+            <li><a href="panzer_IV.html">Panzerkampfwagen IV (Panzer IV)</a></li>
+            <li><a href="Tiger_1.html">Panzerkampfwagen VI Tiger Ausf. E (Tiger I)</a></li>
+ 	    <li><a href="Stridsvagn_M42.html">Stridsvagn M/42</a>
+	    <li><a href="L33.html">Carro Armato L3/33 (CV 33)</a>
+	    <li><a href="M36_GMC.html">90 mm Gun Motor Carriage M36</a>
+            <!-- Add more tanks here -->
+        </ul>
+    </nav>
+    <main>
+        <!-- Content will be displayed here -->
+    </main>
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const tankList = document.getElementById('tankList');
+        
+        searchBar.addEventListener('input', function () {
+            const searchTerm = searchBar.value.toLowerCase();
+            const tanks = tankList.getElementsByTagName('li');
+            
+            for (const tank of tanks) {
+                const tankName = tank.textContent.toLowerCase();
+                if (tankName.includes(searchTerm)) {
+                    tank.style.display = 'block';
+                } else {
+                    tank.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    </form>
+</div>
+
+<!-- Additional Information Section -->
+<div class="additional-info">
+    <h2>Additional Information</h2>
+    <p>Contact us at: andersgames.help@gmail.com</p>
+    <a href="PP.html">Privacy Policy<a/>
+    <a href="ToS.html">Terms of Service</a>
+</div>
+
+
+</body>
+</html>

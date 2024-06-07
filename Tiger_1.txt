@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger I</title>
+    <style>
+     img {
+        max-width: 100%; /* The image won't exceed its original width */
+        max-height: 400px; /* Adjust this value to set the maximum height */
+    }
+            .back-button {
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    .paragraph {
+        margin-bottom: 12px; /* Or padding-bottom: 10px; */
+    }
+        
+    .center {
+        text-align: center;
+    }
+
+    .center-image {
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">Back to Tank List</a>
+    <h1 class="center">Panzerkampfwagen VI Tiger Ausf. E (Tiger I)</h1>
+    <img src="Tiger_I.jpeg" alt="Image not loaded" class="center-image">
+       <ul>
+            <li><strong>Name:</strong> Panzerkampfwagen VI Tiger Ausf. E (Tiger I)</li>
+            <li><strong>Type:</strong> Heavy Tank</li>
+            <li><strong>Year of Production:</strong> 1942-1944</li>
+            <!-- Add more specifications here -->
+        </ul>
+    
+    
+    
+    <!-- Rest of your content here -->
+
+    <script>
+        window.addEventListener('contextmenu', function(event) {
+            event.preventDefault(); // Prevent the context menu from appearing
+        });
+    </script>
+    <p class="paragraph">The Tiger I was a formidable German heavy tank deployed during World War II, seeing action from 1942 in Africa and the Soviet Union. It marked a significant advancement for the German Army by introducing the 8.8 cm KwK 36 gun, adapted from the renowned 8.8 cm Flak 36 anti-aircraft gun, commonly known as the "eighty-eight," which was feared by Allied forces. A total of 1,347 Tiger I tanks were produced between August 1942 and August 1944. Production then shifted towards the Tiger II after August 1944.
+</p>
+    <p class="paragraph">Regarded as an exceptional design for its era, the Tiger I was also criticized for being overengineered, employing costly materials and requiring labor-intensive manufacturing processes. During its early deployment, the tank faced challenges with track failures and other mechanical issues. While it was mechanically reliable, the Tiger I was expensive to maintain and had logistical challenges. Its Schachtellaufwerk-pattern road wheels were susceptible to freezing in muddy, icy, or snowy conditions, particularly problematic during the harsh winters on the Eastern Front.
+</p>
+    <p class="paragraph">The tank earned its "Tiger" moniker from Ferdinand Porsche, with the Roman numeral 'I' added after the introduction of the Tiger II. Initially designated as Panzerkampfwagen VI Ausführung H (PzKpfw VI Ausf. H), denoting Henschel as the designer and manufacturer, it was later renamed to PzKpfw VI Ausf. E in March 1943, with the inventory designation Sd.Kfz. 181.
+</p>
+    <p class="paragraph">Today, only nine Tiger I tanks remain, displayed in museums and private collections globally. As of 2021, Tiger 131, captured during the North Africa Campaign and housed at the UK's Tank Museum, is the sole surviving example restored to operational condition.
+</p>
+    <br>
+    <br>
+    <hr>
+    <h1>Service history</h1>
+    <h3>In service:</h3>
+    <li>1942-1945</li>
+    
+    <h3>Used by:</h3>
+    <li>Germany</li>
+    <li>Hungary</li>
+    <li>France</li>
+    <li>Romania</li>
+    
+    <h3>Wars</h3>
+    <li>World War II</li>
+
+    <h1>Production history</h1>
+    <h3>Designer</h3>
+    <li>Erwin Aders</li>
+    <LI>Henschel & Son</LI>
+    
+    <h3>Designed</h3>
+    <li>1938–1941</li>
+    
+    <h3>Manufacturer</h3>
+    <li>Henschel</li>
+    
+    <h3>Unit cost</h3>
+    <li>250,700 ℛ︁ℳ︁</li>
+    
+    <h3>Produced</h3>
+    <li>1942–1944</li>
+    
+    <h3>No. built</h3>
+    <li>1,347</li>
+    
+</body>
+</html>

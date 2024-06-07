@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M41 Bulldog Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 30px;
+        }
+        .question p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Quiz</h1>
+    <div class="question">
+        <p>What is the full name of M41 Bulldog?</p>
+        <ul class="options">
+            <li><input type="radio" name="q1" value="Walker"> M41 Walker Bulldog</li>
+            <li><input type="radio" name="q1" value="Runner"> M41 Runner Bulldog</li>
+            <li><input type="radio" name="q1" value="Crawler"> M41 Crawling Bulldog</li>
+            <li><input type="radio" name="q1" value="Flying"> M41 Flying Bulldog</li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>When was it produced?</p>
+        <ul class="options">
+            <li><input type="radio" name="q2" value="1966"> 1963-1966</li>
+            <li><input type="radio" name="q2" value="1947"> 1945-1947</li>
+            <li><input type="radio" name="q2" value="1951"> 1945-1951</li>
+            <li><input type="radio" name="q2" value="1954"> 1951-1954</li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>For how long was it in service for the US army?</p>
+        <ul class="options">
+            <li><input type="radio" name="q3" value="10"> 10 Years</li>
+            <li><input type="radio" name="q3" value="16"> 16 Years</li>
+            <li><input type="radio" name="q3" value="14"> 14 Years</li>
+            <li><input type="radio" name="q3" value="20"> 20 Years</li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>How much did it cost to produce in 1988</p>
+        <ul class="options">
+            <li><input type="radio" name="q4" value="162"> 162,000 USD</li>
+            <li><input type="radio" name="q4" value="212"> 212,000 USD</li>
+            <li><input type="radio" name="q4" value="137"> 137,430 USD</li>
+            <li><input type="radio" name="q4" value="184"> 184,500 USD</li>
+        </ul>
+    </div>
+    <div class="question">
+        <p>What is the M41 bulldog for type of tank?</p>
+        <ul class="options">
+            <li><input type="radio" name="q5" value="MBT"> MBT</li>
+            <li><input type="radio" name="q5" value="Medium"> Medium</li>
+            <li><input type="radio" name="q5" value="Light"> Light</li>
+            <li><input type="radio" name="q5" value="Heavy"> Heavy</li>
+        </ul>
+    </div>
+
+    <button onclick="calculateScore()">Submit</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculateScore() {
+        const q1Answer = document.querySelector('input[name="q1"]:checked');
+        const q2Answer = document.querySelector('input[name="q2"]:checked');
+        const q3Answer = document.querySelector('input[name="q3"]:checked');
+	const q4Answer = document.querySelector('input[name="q4"]:checked');
+	const q5Answer = document.querySelector('input[name="q5"]:checked');
+
+        if (!q1Answer || !q2Answer || !q3Answer || !q4Answer || !q5Answer) {
+            alert("Please answer all questions.");
+            return;
+        }
+
+        let score = 0;
+
+        if (q1Answer.value === 'Walker') {
+            score++;
+        }
+
+        if (q2Answer.value === '1954') {
+            score++;
+        }
+
+        if (q3Answer.value === '16') {
+            score++;
+        }
+
+        if (q4Answer.value === '162') {
+            score++;
+        }
+
+        if (q5Answer.value === 'Light') {
+            score++;
+        }
+
+        const result = document.getElementById('result');
+        result.textContent = `You scored ${score} out of 5!`;
+        result.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
